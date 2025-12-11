@@ -94,8 +94,13 @@ int main(int argc, char* argv[]) {
     //
     for (size_t id = 0; id < threads.size(); ++id) {
         threads[id] = std::jthread(
-            []() {
-                // Add your implementation here
+            [&barrier, id, chunkSize, &data, &sums]() {
+                const size_t begin = id * chunkSize;
+		const size_t end = std::min(data.size(), begin + chunkSize);
+
+		for (auto i = begin; i < end; ++i) {
+		    sums[id] += data[i];
+		}
 
                 barrier.arrive_and_wait();
             }
