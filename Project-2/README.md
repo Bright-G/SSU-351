@@ -1,7 +1,8 @@
 ## This Graph demonstrates how additional threads speed up the mean function, in terms of:
 <img width="313" height="42" alt="image" src="https://github.com/user-attachments/assets/f6b527ba-1c2c-450d-9fe4-aa3acce453de" />
 
-![This graph shows the relationship between the number of threads and the speedup the program sees compared to using 1 thread](Project-2/Graph.png)
+<img width="881" height="544" alt="image" src="https://github.com/user-attachments/assets/f3a4d969-6d24-47fc-8563-fc2d2fba7cfb" />
+
 This graph follows a log curve, where each  set of addtional threads increase the speed up less and less,and eventually start to become innefective almost entirely
 ### Around a speed up around 18 times, the function fails to make more progress with more threads
 This means that progress with adding more threads is not linear, and depreciates in effectiveness with this task rather quickly.
